@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .download-button {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .download-button.clicked {
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+    <h2>kliknij aby pobrać mody</h2>
+    <a id="downloadBtn" class="download-button" href="Mods.zip" download>Download</a>
+
+    <p><strong>What you need to have:</strong></p>
+    <ul>
+<li>Wersja 1.20.1</li>
+<li>Mikrofon</li>
+<li>Laptop albo PC</li>
+<li>Launcher dla Minecraft</li>
+<li>IP:MCSMP101.aternos.me:52089 </li>
+<li>Jeśli nie masz modów, nie możesz dołączyć do serwera</li>
+<li>Miłej zabawy!</li>
+    </ul>
+
+    <script>
+        var button = document.getElementById("downloadBtn");
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            button.classList.add("clicked");
+            button.disabled = true;
+            window.open(button.href, "_blank");
+        });
+    </script>
+</body>
+</html>
